@@ -6,7 +6,7 @@ export default {
   head: {
     title: '梁静华的个人网站',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'zh-CN',
     },
     meta: [
       { charset: 'utf-8' },
@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/style/base.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -30,6 +30,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    // 在所有文件中共享 variables/mixins/functions
+    '@nuxtjs/style-resources',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -40,4 +42,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // 需要共享 variables/mixins/functions 的样式文件
+  styleResources: {
+    scss: ['~/assets/style/variables.scss', '~/assets/style/mixins.scss'],
+  },
 }

@@ -1,5 +1,5 @@
 <template>
-  <Work />
+  <Profile />
 </template>
 
 <script>
