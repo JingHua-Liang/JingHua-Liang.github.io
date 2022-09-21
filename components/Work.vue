@@ -14,16 +14,18 @@
 <script>
 export default {
   name: 'NuxtWork',
-  mounted() {
-    const s = document.createElement('script')
-    s.src = '/js/reveal/reveal.js'
-    s.onload = () => {
-      const deck = new window.Reveal({
-        plugins: [],
-      })
-      deck.initialize()
-    }
-    document.body.append(s)
+  head: {
+    script: [{ src: '/js/reveal/reveal.js' }],
+    link: [
+      { rel: 'stylesheet', href: '/js/reveal/reveal.css' },
+      { rel: 'stylesheet', href: '/js/reveal/theme/sky.css' },
+    ],
+  },
+  beforeMount() {
+    const deck = new window.Reveal({
+      plugins: [],
+    })
+    deck.initialize()
   },
 }
 </script>
