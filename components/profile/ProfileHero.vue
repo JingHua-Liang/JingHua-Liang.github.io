@@ -1,13 +1,18 @@
 <template>
   <section id="hero" class="jumbotron">
     <div class="container">
-      <h1 class="hero-title load-hidden">
+      <h1 class="hero-title load-hidden hero-title-name">
         我是<span class="name-container"><Name /></span>
-        <br />
-        一个不知名的设计师
+      </h1>
+      <h1 class="hero-title load-hidden hero-title-desc">
+        一名在不停学习的普通设计师
       </h1>
       <p class="hero-cta load-hidden">
-        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
+        <a
+          rel="noreferrer"
+          class="cta-btn cta-btn--hero"
+          href="javascript:;"
+          @click="viewDetails"
           >查看详情</a
         >
       </p>
@@ -16,8 +21,15 @@
 </template>
 
 <script>
+import jump from 'jump.js'
+
 export default {
   name: 'NuxtProfileHero',
+  methods: {
+    viewDetails(e) {
+      jump('#about')
+    },
+  },
 }
 </script>
 
@@ -78,6 +90,10 @@ export default {
     @include respond(phone-xs) {
       font-size: 2.8rem;
     }
+  }
+
+  .hero-title-name {
+    margin-bottom: 1rem;
   }
 
   .hero-cta {

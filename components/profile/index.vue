@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import VanillaTilt from 'vanilla-tilt'
 import initScrollReveal from './scrollReveal'
 import { targetElements, defaultProps } from './scrollRevealConfig'
 
@@ -18,6 +19,13 @@ export default {
   },
   mounted() {
     initScrollReveal(targetElements(window), defaultProps)
+    this.initTiltAnimation()
+  },
+  methods: {
+    initTiltAnimation() {
+      const elements = document.querySelectorAll('.js-tilt')
+      VanillaTilt.init(elements)
+    },
   },
 }
 </script>

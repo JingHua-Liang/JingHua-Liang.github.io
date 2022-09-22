@@ -1,7 +1,7 @@
 <template>
   <section id="about">
     <div class="container">
-      <h2 class="section-title load-hidden">About me</h2>
+      <h2 class="section-title load-hidden">关于我</h2>
       <div class="row about-wrapper">
         <div class="col-md-6 col-sm-12">
           <div class="about-wrapper__image load-hidden">
@@ -9,7 +9,7 @@
               class="img-fluid rounded shadow-lg"
               height="auto"
               width="300px"
-              src="assets/profile.jpg"
+              src="~/assets/profile.jpg"
               alt="Profile Image"
             />
           </div>
@@ -17,20 +17,29 @@
         <div class="col-md-6 col-sm-12">
           <div class="about-wrapper__info load-hidden">
             <p class="about-wrapper__info-text">
-              This is where you can describe about yourself. The more you
-              describe about yourself, the more chances you can!
+              大学毕业后，我在一家检测机构从事基因检测的工作。
+              由于学过一段时间绘画，有一定的绘画基础并且对 UI
+              设计有着浓厚的兴趣。 工作一年后，决定离职学习 UI 设计。
             </p>
             <p class="about-wrapper__info-text">
-              Extra Information about you! like hobbies and your goals.
+              我一直在为成为一个优秀的 UI 设计师而努力。
             </p>
             <span class="d-flex mt-3">
               <a
                 rel="noreferrer"
                 target="_blank"
                 class="cta-btn cta-btn--resume"
-                href="assets/resume.pdf"
+                href="/resume.pdf"
               >
-                View Resume
+                我的简历
+              </a>
+              <a
+                rel="noreferrer"
+                target="_blank"
+                class="cta-btn cta-btn--resume"
+                href="https://www.figma.com/proto/SY8AVTX6xYkk2QXIetDPgX/liang-jing-hua?page-id=0%3A1&node-id=1%3A2094&viewport=774%2C932%2C0.03&scaling=min-zoom"
+              >
+                我的作品集
               </a>
             </span>
           </div>
@@ -94,6 +103,10 @@ export default {
 
       @include respond(tab-port-sm) {
         align-items: center;
+      }
+
+      .cta-btn--resume {
+        margin-right: 2rem;
       }
 
       &-text {
