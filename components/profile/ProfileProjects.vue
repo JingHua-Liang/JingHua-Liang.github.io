@@ -39,12 +39,8 @@
           </div>
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image load-hidden">
-              <a
-                rel="noreferrer"
-                :href="'javascript:;'"
-                @click="() => viewThumbnail(project)"
-              >
-                <span
+              <div @click="() => viewThumbnail(project)">
+                <div
                   data-tilt
                   data-tilt-max="4"
                   data-tilt-glare="true"
@@ -52,12 +48,12 @@
                   class="thumbnail rounded js-tilt"
                 >
                   <img
-                    :alt="project.thumbnail.alt || 'Project Image'"
                     class="img-fluid"
                     :src="project.thumbnail.src"
+                    :alt="project.thumbnail.alt || 'Project Image'"
                   />
-                </span>
-              </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -68,7 +64,7 @@
 </template>
 
 <script>
-import { projects } from './data.js'
+import { projects } from '@/assets/js/data.js'
 
 export default {
   name: 'NuxtProfileProjects',
@@ -105,8 +101,7 @@ export default {
     .row {
       margin-bottom: 8rem;
 
-      .project-desc,
-      .thumbnail {
+      .project-desc {
         display: block;
       }
 

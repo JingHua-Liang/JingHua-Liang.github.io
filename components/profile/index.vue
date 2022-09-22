@@ -9,13 +9,13 @@
 
 <script>
 import VanillaTilt from 'vanilla-tilt'
-import initScrollReveal from './scrollReveal'
-import { targetElements, defaultProps } from './scrollRevealConfig'
+import initScrollReveal from '@/assets/js/scrollReveal'
+import { targetElements, defaultProps } from '@/assets/js/scrollRevealConfig'
 
 export default {
   name: 'NuxtProfile',
   head: {
-    script: [{ src: '/js/scrollReveal.min.js' }],
+    script: [{ src: '/js/scrollreveal.min.js' }],
   },
   mounted() {
     initScrollReveal(targetElements(window), defaultProps)
