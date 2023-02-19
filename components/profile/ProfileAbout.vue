@@ -33,10 +33,18 @@
               >
                 我的简历
               </a>
-              <NuxtLink
+              <a
+                rel="noreferrer"
+                target="_blank"
+                class="cta-btn cta-btn--resume"
+                href="/portfolio/index.html"
+              >
+                我的作品集
+              </a>
+              <!-- <NuxtLink
                 class="cta-btn cta-btn--resume"
                 to="/portfolio"
-                >我的作品集</NuxtLink>
+                >我的作品集</NuxtLink> -->
             </span>
           </div>
         </div>
