@@ -1,6 +1,12 @@
 <template>
   <div class="portfolio-page">
-    <img v-for="img in imgs" :key="img" :src="`/portfolio/Slice ${img}.jpg`" alt="portfolio">
+    <img
+      v-for="img in imgs"
+      :key="img"
+      :src="`/portfolio/Slice ${img}.jpg`"
+      alt="portfolio"
+      loading="lazy"
+    >
   </div>
 </template>
 
