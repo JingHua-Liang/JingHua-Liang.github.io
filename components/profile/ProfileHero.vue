@@ -5,7 +5,7 @@
         我是<span class="name-container"><Name /></span>
       </h1>
       <h1 class="hero-title load-hidden hero-title-desc">
-        一名在不停学习的普通设计师
+        一名在不停学习的 UI 设计师
       </h1>
       <p class="hero-cta load-hidden">
         <a
