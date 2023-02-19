@@ -1,5 +1,7 @@
 <template>
-  <div class="portfolio-page">PortfolioPage</div>
+  <div class="portfolio-page">
+    <NuxtLink to="/">Home</NuxtLink>
+  </div>
 </template>
 
 <script>

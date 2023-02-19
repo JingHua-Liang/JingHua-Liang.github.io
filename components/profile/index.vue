@@ -14,9 +14,9 @@ import { targetElements, defaultProps } from '@/assets/js/scrollRevealConfig'
 
 export default {
   name: 'NuxtProfile',
-  head: {
-    script: [{ src: '/js/scrollreveal.min.js' }],
-  },
+  // head: {
+  //   script: [{ src: '/js/scrollreveal.min.js' }],
+  // },
   mounted() {
     initScrollReveal(targetElements(window), defaultProps)
     this.initTiltAnimation()
