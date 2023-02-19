@@ -33,14 +33,10 @@
               >
                 我的简历
               </a>
-              <a
-                rel="noreferrer"
-                target="_blank"
+              <NuxtLink
                 class="cta-btn cta-btn--resume"
-                href="https://www.figma.com/proto/SY8AVTX6xYkk2QXIetDPgX/liang-jing-hua?page-id=0%3A1&node-id=1%3A2094&viewport=774%2C932%2C0.03&scaling=min-zoom"
-              >
-                我的作品集
-              </a>
+                to="/portfolio"
+                >我的作品集</NuxtLink>
             </span>
           </div>
         </div>
