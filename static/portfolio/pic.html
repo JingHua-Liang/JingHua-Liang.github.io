@@ -18,18 +18,91 @@
       width: 100%;
     }
   </style>
+  <style>
+    .loading-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .lds-ellipsis {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    .lds-ellipsis div {
+      position: absolute;
+      top: 33px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: rgb(92, 112, 128);
+      animation-timing-function: cubic-bezier(0, 1, 1, 0);
+    }
+    .lds-ellipsis div:nth-child(1) {
+      left: 8px;
+      animation: lds-ellipsis1 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(2) {
+      left: 8px;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(3) {
+      left: 32px;
+      animation: lds-ellipsis2 0.6s infinite;
+    }
+    .lds-ellipsis div:nth-child(4) {
+      left: 56px;
+      animation: lds-ellipsis3 0.6s infinite;
+    }
+    @keyframes lds-ellipsis1 {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes lds-ellipsis3 {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+    @keyframes lds-ellipsis2 {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(24px, 0);
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="portfolio"></div>
+  <div class="loading-container">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
   <script>
     const portfolio = document.querySelector('#portfolio');
     loadImages();
 
     async function loadImages() {
       for(let i = 0; i < 31; i++) {
-        const src = `/portfolio/Slice ${i + 1}.jpg`
+        const src = `https://cdn.jsdelivr.net/gh/ljhliang/ljhliang.github.io@latest/static/portfolio/Slice ${i + 1}.jpg`
         await loadImage(src);
       }
+      const loadingContainer = document.querySelector('.loading-container');
+      if (loadingContainer) loadingContainer.style.display = 'none';
     }
 
     function loadImage(src) {
