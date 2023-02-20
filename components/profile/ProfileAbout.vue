@@ -29,7 +29,7 @@
                 rel="noreferrer"
                 target="_blank"
                 class="cta-btn cta-btn--resume"
-                href="/resume.pdf"
+                :href="`${staticFilePrefix}/resume.pdf`"
               >
                 我的简历
               </a>
@@ -54,8 +54,11 @@
 </template>
 
 <script>
+import { StaticFilePrefixMixins } from '@/assets/js/utils'
+
 export default {
   name: 'NuxtProfileAbout',
+  mixins: [StaticFilePrefixMixins],
 }
 </script>
 
