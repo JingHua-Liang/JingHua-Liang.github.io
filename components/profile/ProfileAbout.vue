@@ -9,7 +9,7 @@
               class="img-fluid rounded shadow-lg"
               height="auto"
               width="300px"
-              src="~/assets/profile.jpg"
+              :src="`${staticFilePrefix}/profile.jpg`"
               alt="Profile Image"
             />
           </div>
