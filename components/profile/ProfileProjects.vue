@@ -49,7 +49,7 @@
                 >
                   <img
                     class="img-fluid"
-                    :src="project.thumbnail.src"
+                    :src="staticFilePrefix + project.thumbnail.src"
                     :alt="project.thumbnail.alt || 'Project Image'"
                   />
                 </div>
@@ -65,9 +65,11 @@
 
 <script>
 import { projects } from '@/assets/js/data.js'
+import { StaticFilePrefixMixins } from '@/assets/js/utils'
 
 export default {
   name: 'NuxtProfileProjects',
+  mixins: [StaticFilePrefixMixins],
   data() {
     return { projects }
   },
