@@ -42,7 +42,9 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    publicPath: 'https://gcore.jsdelivr.net/gh/ljhliang/ljhliang.github.io@gh-pages',
+  },
 
   // 需要共享 variables/mixins/functions 的样式文件
   styleResources: {
