@@ -93,6 +93,9 @@
     </div>
   </div>
   <script>
+    (function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+  </script>
+  <script>
     const portfolio = document.querySelector('#portfolio');
     loadImages();
 
@@ -110,11 +113,13 @@
     function loadImage(src) {
       return new Promise((resolve) => {
         const img = document.createElement('img')
-        img.alt = src
+        img.alt = 'portfolio';
         img.onload =() => {
+          console.log('load')
           resolve(true)
         };
-        img.onerror = () => {
+        img.onerror = (e) => {
+          console.log('error', JSON.stringify(e))
           resolve(false)
         };
         portfolio.appendChild(img);
