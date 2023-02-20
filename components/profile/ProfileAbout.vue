@@ -37,7 +37,7 @@
                 rel="noreferrer"
                 target="_blank"
                 class="cta-btn cta-btn--resume"
-                href="/portfolio/index.html"
+                href="/portfolio/pic.html"
               >
                 我的作品集
               </a>
