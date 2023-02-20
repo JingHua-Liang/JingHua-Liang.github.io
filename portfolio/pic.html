@@ -119,7 +119,7 @@
           resolve(true)
         };
         img.onerror = (e) => {
-          console.log('error', JSON.stringify(e))
+          console.log('error', e)
           resolve(false)
         };
         img.src = src;
