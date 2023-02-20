@@ -98,7 +98,9 @@
 
     async function loadImages() {
       for(let i = 0; i < 31; i++) {
-        const src = `https://cdn.jsdelivr.net/gh/ljhliang/ljhliang.github.io@latest/static/portfolio/Slice ${i + 1}.jpg`
+        const isLocahost = window.location.hostname === 'localhost';
+        const prefix = isLocahost ? "" : "https://cdn.jsdelivr.net/gh/ljhliang/ljhliang.github.io@latest/static"
+        const src = `${prefix}/portfolio/Slice-${i + 1}.jpg`
         await loadImage(src);
       }
       const loadingContainer = document.querySelector('.loading-container');
