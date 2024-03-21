@@ -29,7 +29,7 @@
                 rel="noreferrer"
                 target="_blank"
                 class="cta-btn cta-btn--resume"
-                :href="`${staticFilePrefix}/resume.pdf`"
+                :href="`${staticFilePrefix}/resume2.pdf`"
               >
                 我的简历
               </a>
