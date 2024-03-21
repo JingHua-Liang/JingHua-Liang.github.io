@@ -100,10 +100,10 @@
     loadImages();
 
     async function loadImages() {
-      for (let i = 0; i < 62; i++) {
+      for (let i = 0; i < 36; i++) {
         const isLocahost = window.location.hostname === 'localhost';
         const prefix = isLocahost ? "" : "https://gcore.jsdelivr.net/gh/ljhliang/ljhliang.github.io@latest/static";
-        const src = `${prefix}/portfolio/${i + 1}.jpg`;
+        const src = `${prefix}/portfolio/${i + 1}.png`;
         await loadImage(src);
       }
       const loadingContainer = document.querySelector('.loading-container');
